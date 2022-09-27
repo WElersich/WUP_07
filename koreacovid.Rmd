@@ -60,7 +60,13 @@ Here we can see that the percentage based bar chart would be more useful for vis
 
   
 ## Numerical results
+```{r}
+table1 <- xtabs(~result + Sex, data=chartdata)
+rowPerc(table1)
+colPerc(table1)
+```
 
+The lower table does not seem to be very useful to answer our question. Looking at the upper plot, we can conclude that males are dying more than females.
 
 ## Inferential results 
 
