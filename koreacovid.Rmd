@@ -78,7 +78,7 @@ chisq.test(table1)
 chisqtestGC(table1)
 fisher.test(table1)
 ```
-The low p-values tell us that there is a very low chance that the data we have is coincidental. The odds ratio states that males are 2.3 times more likely to die from Covid-19 than females. Therefore we reject the null hypothesis, and state that whether or not one dies from Covid-19 is dependent on sex.
+The low p-values tell us that there is a very low chance that the data we have is coincidental. The odds ratio states that males are 2.3 times more likely to die from Covid-19 than females, which is backed by the confidence interval. We can Therefore we reject the null hypothesis, and state that whether or not one dies from Covid-19 is dependent on sex. 
 
 
 ## Conclusions
