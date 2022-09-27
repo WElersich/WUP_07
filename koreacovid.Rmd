@@ -82,4 +82,4 @@ The low p-values tell us that there is a very low chance that the data we have i
 
 
 ## Conclusions
-
+From our graphical, numerical, and inferential results we determined that men are more than twice as likely as women to die from Covid-19.
