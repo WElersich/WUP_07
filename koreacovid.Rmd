@@ -23,7 +23,9 @@ Some of the data was uncoded for sex - sex must be just male or female
 state of a patient must be died or alive - we adjust that as well   
   
 # Question 1 - Is dying independent of sex
+H_0 dying of Covid-19 is independent of sex
 
+H_1 dying of Covid-19 is dependent on sex
 
 
 
@@ -66,11 +68,17 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-The lower table does not seem to be very useful to answer our question. Looking at the upper plot, we can conclude that males are dying more than females.
+The lower table does not seem to be very useful to answer our question. Looking at the upper plot, we can conclude that males are dying more than females, with 64% of those dying being male.
 
 ## Inferential results 
+We shall use the Chi-squared test and the fisher test.
 
-
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+The low p-values tell us that there is a very low chance that the data we have is coincidental. The odds ratio states that males are 2.3 times more likely to die from Covid-19 than females. Therefore we reject the null hypothesis, and state that whether or not one dies from Covid-19 is dependent on sex.
 
 
 ## Conclusions
