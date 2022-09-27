@@ -38,9 +38,21 @@ with(kRdata, table(Sex, result))
 
 ## We create two bar charts - one based on frequency and the other on percent, use ggplot commands to do this
 
-`
+```{r}
+chartdata <- kRdata %>%
+mutate(across(where(is.character), as.factor))
+chart<- chartdata %>% group_by(result,Sex) %>% summarize(count=n()) %>% mutate(prcnt=count/sum(count))
 
-  
+
+chartfreq <- ggplot(chart,aes(x=result,y=count,fill=Sex))
+chartfreq + geom_bar(stat="identity",position="dodge")
+
+chartperc <- ggplot(chart,aes(x=result,y=prcnt*100,fill=Sex))
+chartperc + geom_bar(stat="identity",position="dodge")
+
+```
+
+Here we can see that the percentage based bar chart would be more useful for visualizing our data. By looking at this chart, we can see that a greater percentage of those killed were male. It would appear that Covid-19 is more deadly to males than to females.
 
 
 
